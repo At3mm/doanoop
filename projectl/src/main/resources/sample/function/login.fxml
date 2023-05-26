@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="804.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Login">
+   <children>
+      <AnchorPane prefHeight="804.0" prefWidth="391.0" style="-fx-background-color: #1c91c6;">
+         <children>
+            <Label layoutX="156.0" layoutY="130.0" prefHeight="62.0" prefWidth="146.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Forte" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="71.0" layoutY="243.0" prefHeight="53.0" prefWidth="231.0" promptText="Username">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="16.0" />
+               </font>
+            </TextField>
+            <Label fx:id="wrongLogin" layoutX="62.0" layoutY="391.0" prefHeight="73.0" prefWidth="248.0" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="button" layoutX="160.0" layoutY="480.0" onAction="#userLogin" prefHeight="53.0" prefWidth="52.0" style="-fx-background-color: #1c91c6;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <PasswordField fx:id="password" layoutX="71.0" layoutY="330.0" prefHeight="53.0" prefWidth="231.0" promptText="Password">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="16.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </AnchorPane>
+      <Circle fill="#64a6ff85" layoutX="966.0" layoutY="126.0" radius="100.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="#1fcbff89" layoutX="655.0" layoutY="695.0" radius="45.0" stroke="#ffffff00" strokeType="INSIDE" />
+      <Circle fill="#0088ff4f" layoutX="878.0" layoutY="288.0" radius="130.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="#68a8e32b" layoutX="1008.0" layoutY="418.0" radius="100.0" stroke="#ffffff00" strokeType="INSIDE" />
+      <Circle fill="#1fddff5a" layoutX="786.0" layoutY="550.0" radius="100.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="#213dc44c" layoutX="948.0" layoutY="682.0" radius="100.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="#21cfff3e" layoutX="923.0" layoutY="537.0" radius="45.0" stroke="#ffffff00" strokeType="INSIDE" />
+      <Circle fill="#21cfff3e" layoutX="793.0" layoutY="250.0" radius="45.0" stroke="#ffffff00" strokeType="INSIDE" />
+      <Circle fill="#68a8e32b" layoutX="586.0" layoutY="139.0" radius="100.0" stroke="#ffffff00" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
