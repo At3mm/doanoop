@@ -59,55 +59,56 @@
             <center>
                 <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
                <children>
-                  <TableView layoutY="475.0" prefHeight="330.0" prefWidth="900.0" stylesheets="@../Css/table.css">
+                  <TableView fx:id="table" layoutY="475.0" prefHeight="330.0" prefWidth="900.0" stylesheets="@../Css/table.css">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="Stt" />
-                      <TableColumn prefWidth="120.0" text="Ma su co" />
-                        <TableColumn prefWidth="163.0" text="Ma NV" />
-                        <TableColumn prefWidth="172.0" text="Bien so xe" />
-                        <TableColumn prefWidth="366.0" text="Mo ta su co" />
+                      <TableColumn fx:id="maSuCoColumn" prefWidth="120.0" text="Ma su co" />
+                        <TableColumn fx:id="maNVColumn" prefWidth="163.0" text="Ma NV" />
+                        <TableColumn fx:id="ngayColumn" prefWidth="75.0" text="Ngay" />
+                        <TableColumn fx:id="gioColumn" prefWidth="169.60009765625" text="Gio" />
+                        <TableColumn fx:id="bienSoXeColumn" prefWidth="172.0" text="Bien so xe" />
+                        <TableColumn fx:id="moTaSuCoColumn" prefWidth="271.9999084472656" text="Mo ta su co" />
                     </columns>
                   </TableView>
-                  <TextField layoutX="102.0" layoutY="94.0" prefHeight="45.0" prefWidth="250.0" promptText="Nhap ma su co" stylesheets="@../Css/textfield.css">
+                  <TextField fx:id="MaSuCo" layoutX="102.0" layoutY="94.0" prefHeight="46.0" prefWidth="374.0" promptText="Nhap ma su co" stylesheets="@../Css/textfield.css">
                      <font>
                         <Font name="Lucida Sans Unicode" size="18.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="102.0" layoutY="174.0" prefHeight="45.0" prefWidth="250.0" promptText="Nhap ma nhan vien" stylesheets="@../Css/textfield.css">
+                  <TextField fx:id="MaNhanVien" layoutX="102.0" layoutY="174.0" prefHeight="46.0" prefWidth="374.0" promptText="Nhap ma nhan vien" stylesheets="@../Css/textfield.css">
                      <font>
                         <Font name="Lucida Sans Unicode" size="18.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="102.0" layoutY="253.0" prefHeight="45.0" prefWidth="250.0" promptText="Nhap bien so xe" stylesheets="@../Css/textfield.css">
+                  <TextField fx:id="BienSoXe" layoutX="102.0" layoutY="253.0" prefHeight="46.0" prefWidth="375.0" promptText="Nhap bien so xe" stylesheets="@../Css/textfield.css">
                      <font>
                         <Font name="Lucida Sans Unicode" size="18.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="102.0" layoutY="336.0" prefHeight="51.0" prefWidth="475.0" promptText="Mo ta su co" stylesheets="@../Css/textfield.css">
+                  <TextField fx:id="MoTa" layoutX="102.0" layoutY="336.0" prefHeight="51.0" prefWidth="373.0" promptText="Mo ta su co" stylesheets="@../Css/textfield.css">
                      <font>
                         <Font name="Lucida Sans Unicode" size="18.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="622.0" layoutY="176.0" mnemonicParsing="false" styleClass="button-1" stylesheets="@../Css/button.css" text="Modify" />
-                  <Button layoutX="622.0" layoutY="255.0" mnemonicParsing="false" styleClass="button-1" stylesheets="@../Css/button.css" text="Delete" />
-                  <Button layoutX="622.0" layoutY="339.0" mnemonicParsing="false" styleClass="button-1" stylesheets="@../Css/button.css" text="Search" />
-                  <Button layoutX="622.0" layoutY="96.0" mnemonicParsing="false" styleClass="button-1" stylesheets="@../Css/button.css" text=" Add " />
-                  <Label layoutX="103.0" layoutY="72.0" text="Ma su co">
+                  <Button fx:id="addButton" layoutX="622.0" layoutY="176.0" mnemonicParsing="false" onAction="#addProblem" prefHeight="50.0" prefWidth="90.0" styleClass="button-1" stylesheets="@../Css/button.css" text="Add" />
+                  <Button fx:id="modifyButton" layoutX="622.0" layoutY="255.0" mnemonicParsing="false" onAction="#modifyProblem" prefHeight="50.0" prefWidth="90.0" styleClass="button-1" stylesheets="@../Css/button.css" text="Modify" />
+                  <Button fx:id="deleteButton" layoutX="622.0" layoutY="339.0" mnemonicParsing="false" onAction="#deleteProblem" prefHeight="50.0" prefWidth="90.0" styleClass="button-1" stylesheets="@../Css/button.css" text="Delete" />
+                  <Button fx:id="searchButton" layoutX="622.0" layoutY="96.0" mnemonicParsing="false" onAction="#searchProblem" prefHeight="50.0" prefWidth="90.0" styleClass="button-1" stylesheets="@../Css/button.css" text="Search" />
+                  <Label layoutX="103.0" layoutY="72.0" text="Mã sự cố">
                      <font>
                         <Font name="Lucida Sans Unicode" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="102.0" layoutY="154.0" text="Ma nhan vien">
+                  <Label layoutX="102.0" layoutY="154.0" text="Mã nhân viên">
                      <font>
                         <Font name="Lucida Sans Unicode" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="99.0" layoutY="233.0" text="Bien so xe">
+                  <Label layoutX="99.0" layoutY="233.0" text="Biển số xe">
                      <font>
                         <Font name="Lucida Sans Unicode" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="102.0" layoutY="317.0" text="Mo ta su co">
+                  <Label layoutX="102.0" layoutY="317.0" text="Mô tả">
                      <font>
                         <Font name="Lucida Sans Unicode" size="14.0" />
                      </font>
