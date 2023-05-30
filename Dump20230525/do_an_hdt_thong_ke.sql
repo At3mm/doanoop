@@ -16,30 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `the_ngay`
+-- Table structure for table `thong_ke`
 --
 
-DROP TABLE IF EXISTS `the_ngay`;
+DROP TABLE IF EXISTS `thong_ke`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `the_ngay` (
-  `MaThe` char(10) NOT NULL,
-  `LoaiThe` char(10) NOT NULL DEFAULT 'Thẻ ngày',
-  `LoaiXe` char(16) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
-  `BienSoXe` char(10) DEFAULT NULL,
-  PRIMARY KEY (`MaThe`),
-  KEY `mathe_1_idx` (`MaThe`),
-  CONSTRAINT `mathe_1` FOREIGN KEY (`MaThe`) REFERENCES `nhan_tra_xe` (`MaThe`) ON DELETE CASCADE ON UPDATE CASCADE
+CREATE TABLE `thong_ke` (
+  `MaTK` char(10) NOT NULL,
+  `TienGui` int DEFAULT NULL,
+  `ThoiGian` date DEFAULT NULL,
+  `MaNV` char(10) NOT NULL,
+  PRIMARY KEY (`MaTK`),
+  KEY `nv_3_idx` (`MaNV`),
+  CONSTRAINT `nv_3` FOREIGN KEY (`MaNV`) REFERENCES `tai_khoan` (`MaNV`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `the_ngay`
+-- Dumping data for table `thong_ke`
 --
 
-LOCK TABLES `the_ngay` WRITE;
-/*!40000 ALTER TABLE `the_ngay` DISABLE KEYS */;
-/*!40000 ALTER TABLE `the_ngay` ENABLE KEYS */;
+LOCK TABLES `thong_ke` WRITE;
+/*!40000 ALTER TABLE `thong_ke` DISABLE KEYS */;
+/*!40000 ALTER TABLE `thong_ke` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-30 14:21:23
+-- Dump completed on 2023-05-30 14:21:22

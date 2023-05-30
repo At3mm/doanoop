@@ -39,6 +39,7 @@ CREATE TABLE `tai_khoan` (
 
 LOCK TABLES `tai_khoan` WRITE;
 /*!40000 ALTER TABLE `tai_khoan` DISABLE KEYS */;
+INSERT INTO `tai_khoan` VALUES ('NV01','Viet','0132456','Viet01','1','Admin'),('NV03','Quyet','03215641','Quyet1','2','NV'),('NV04','Hung','0624846','Hung1','1','NV'),('NV05','Vinh','159753','Vinh01','1','NV');
 /*!40000 ALTER TABLE `tai_khoan` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-29 21:17:25
+-- Dump completed on 2023-05-30 14:21:22

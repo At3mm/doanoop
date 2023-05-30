@@ -24,8 +24,7 @@ DROP TABLE IF EXISTS `khu`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `khu` (
   `MaKhu` char(10) NOT NULL,
-  `ViTriToiDa` int DEFAULT NULL,
-  `ViTriConTrong` int DEFAULT NULL,
+  `TenKhu` char(10) DEFAULT NULL,
   PRIMARY KEY (`MaKhu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -36,7 +35,7 @@ CREATE TABLE `khu` (
 
 LOCK TABLES `khu` WRITE;
 /*!40000 ALTER TABLE `khu` DISABLE KEYS */;
-INSERT INTO `khu` VALUES ('K01',50,30),('K02',50,15),('K03',50,23),('K04',50,40);
+INSERT INTO `khu` VALUES ('K01','A'),('K02','B'),('K03','C'),('K04','D'),('K05','E'),('K06','F');
 /*!40000 ALTER TABLE `khu` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-25 23:03:49
+-- Dump completed on 2023-05-30 14:21:22

@@ -16,30 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `the_ngay`
+-- Table structure for table `vi_tri`
 --
 
-DROP TABLE IF EXISTS `the_ngay`;
+DROP TABLE IF EXISTS `vi_tri`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `the_ngay` (
-  `MaThe` char(10) NOT NULL,
-  `LoaiThe` char(10) NOT NULL DEFAULT 'Thẻ ngày',
-  `LoaiXe` char(16) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
-  `BienSoXe` char(10) DEFAULT NULL,
-  PRIMARY KEY (`MaThe`),
-  KEY `mathe_1_idx` (`MaThe`),
-  CONSTRAINT `mathe_1` FOREIGN KEY (`MaThe`) REFERENCES `nhan_tra_xe` (`MaThe`) ON DELETE CASCADE ON UPDATE CASCADE
+CREATE TABLE `vi_tri` (
+  `ViTri` char(10) NOT NULL,
+  `STT` int DEFAULT NULL,
+  `MaKhu` char(10) NOT NULL,
+  PRIMARY KEY (`ViTri`),
+  KEY `MaKhu_idx` (`MaKhu`),
+  CONSTRAINT `MaKhu` FOREIGN KEY (`MaKhu`) REFERENCES `khu` (`MaKhu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `the_ngay`
+-- Dumping data for table `vi_tri`
 --
 
-LOCK TABLES `the_ngay` WRITE;
-/*!40000 ALTER TABLE `the_ngay` DISABLE KEYS */;
-/*!40000 ALTER TABLE `the_ngay` ENABLE KEYS */;
+LOCK TABLES `vi_tri` WRITE;
+/*!40000 ALTER TABLE `vi_tri` DISABLE KEYS */;
+INSERT INTO `vi_tri` VALUES ('A01',1,'K01'),('A02',2,'K01'),('A03',3,'K01'),('A04',4,'K01'),('A05',5,'K01'),('A06',6,'K01'),('A07',7,'K01'),('A08',8,'K01'),('A09',9,'K01'),('A10',10,'K01'),('A11',11,'K01'),('A12',12,'K01');
+/*!40000 ALTER TABLE `vi_tri` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

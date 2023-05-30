@@ -29,13 +29,14 @@ CREATE TABLE `nhan_tra_xe` (
   `GioNhan` time DEFAULT NULL,
   `NgayTra` date DEFAULT NULL,
   `GioTra` time DEFAULT NULL,
-  `MaKhu` char(10) DEFAULT NULL,
-  `MaNV` char(10) DEFAULT NULL,
+  `SoTien` int DEFAULT NULL,
+  `ViTri` char(10) NOT NULL,
+  `MaNV` char(10) NOT NULL,
   PRIMARY KEY (`MaThe`),
-  KEY `khu_1_idx` (`MaKhu`),
   KEY `manv_1_idx` (`MaNV`),
-  CONSTRAINT `k_1` FOREIGN KEY (`MaKhu`) REFERENCES `khu` (`MaKhu`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `nv_1` FOREIGN KEY (`MaNV`) REFERENCES `tai_khoan` (`MaNV`)
+  KEY `vitri_1_idx` (`ViTri`),
+  CONSTRAINT `nv_1` FOREIGN KEY (`MaNV`) REFERENCES `tai_khoan` (`MaNV`),
+  CONSTRAINT `vitri_1` FOREIGN KEY (`ViTri`) REFERENCES `vi_tri` (`ViTri`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -57,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-29 21:17:25
+-- Dump completed on 2023-05-30 14:21:22
