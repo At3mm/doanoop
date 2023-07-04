@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="805.0" prefWidth="1127.0" style="-fx-background-color: rgba(0, 0, 0, 0); -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Employee.Area">
+    <children>
+        <BorderPane prefHeight="805.0" prefWidth="1127.0" style="-fx-background-radius: 10;">
+            <effect>
+                <Blend />
+            </effect>
+            <left>
+                <AnchorPane prefHeight="524.0" prefWidth="220.0" style="-fx-background-color: #1c91c6; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXButton fx:id="Logout" layoutX="87.0" layoutY="65.0" onAction="#logout" prefHeight="55.0" prefWidth="55.0" text=" " textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/sign-out.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></JFXButton>
+                        <JFXButton fx:id="buttonArea" layoutY="274.0" onAction="#Area" prefHeight="115.0" prefWidth="232.0" style="-fx-background-color: #FFFFFF;" text="Khu" textFill="#1c91c6">
+                            <font>
+                                <Font name="MT Extra" size="24.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="buttonParking" layoutY="159.0" onAction="#Parking" prefHeight="115.0" prefWidth="232.0" text="Nhận trả xe" textFill="WHITE">
+                            <font>
+                                <Font name="MT Extra" size="24.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="buttonEInformation" layoutY="619.0" onAction="#EInformation" prefHeight="115.0" prefWidth="232.0" text="Thông tin" textFill="WHITE">
+                            <font>
+                                <Font name="MT Extra" size="24.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="buttonCard" layoutY="389.0" onAction="#Card" prefHeight="115.0" prefWidth="232.0" text="Đăng kí thẻ tháng" textFill="WHITE">
+                            <font>
+                                <Font name="MT Extra" size="24.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="buttonEProblem" layoutY="504.0" onAction="#EProblem" prefHeight="115.0" prefWidth="232.0" text="Sự cố" textFill="WHITE">
+                            <font>
+                                <Font name="MT Extra" size="24.0" />
+                            </font>
+                        </JFXButton>
+                    </children></AnchorPane>
+            </left>
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="527.0" layoutX="63.0" layoutY="148.0" stroke="#1c91c6" strokeType="INSIDE" strokeWidth="5.0" width="371.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="528.0" layoutX="448.0" layoutY="148.0" stroke="#1c91c6" strokeType="INSIDE" strokeWidth="5.0" width="371.0" />
+                  <Label layoutX="520.0" layoutY="240.0" text="Tổng số xe: ">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="520.0" layoutY="313.0" text="Khu F:">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="520.0" layoutY="382.0" text="Khu G:">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="520.0" layoutY="451.0" text="Khu H:">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="520.0" layoutY="528.0" text="Khu I:">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="520.0" layoutY="608.0" text="Khu J:">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="206.0" layoutY="168.0" text="Xe máy" textFill="#1c91c6">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="603.0" layoutY="168.0" text="Xe đạp" textFill="#1c91c6">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="250.0" text="Tổng số xe: ">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="323.0" text="Khu A:">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="392.0" text="Khu B:">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="461.0" text="Khu C:">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="538.0" text="Khu D:">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="618.0" text="Khu E:">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="325.0" layoutY="80.0" text="Số xe trong các khu" textFill="#1c91c6">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="khuH" layoutX="652.0" layoutY="450.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="khuG" layoutX="652.0" layoutY="381.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="khuF" layoutX="652.0" layoutY="312.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="tongXeDap" layoutX="652.0" layoutY="242.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="khuE" layoutX="261.0" layoutY="617.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="khuD" layoutX="261.0" layoutY="537.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="khuC" layoutX="261.0" layoutY="460.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="khuB" layoutX="261.0" layoutY="391.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="khuA" layoutX="261.0" layoutY="322.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="khuI" layoutX="652.0" layoutY="527.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="khuJ" layoutX="652.0" layoutY="602.0" prefHeight="30.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="tongXeMay" layoutX="261.0" layoutY="252.0" prefHeight="28.0" prefWidth="60.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="18.0" />
+                     </font></Label>
+               </children></AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
